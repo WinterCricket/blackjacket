@@ -13,10 +13,10 @@ function deal(){
 
 	if(newSum < 21){
 		messageEl.textContent = "Want another card?";
-	} else if(newSum == 21) {
+	} else if(newSum === 21) {
 		messageEl.textContent = "TWENTY-ONE!";
 	} else {
-		messageEl.textContent = "You busted!";
+		messageEl.textContent = "You have busted!";
 	}
 }
 
@@ -30,7 +30,4 @@ function save() {
 	sumEl.textContent = sum;
 	console.log(sumStr);
 }
-
-
-//conditionals
 

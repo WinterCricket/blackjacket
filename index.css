@@ -4,12 +4,27 @@ html, body {
 }
 
 body {
-    background-color: darkgreen;
+    /*background-color: darkgreen;*/
     text-align: center;
     font-weight: bold;
-    font-family: 'Trebuchet MS', 'Lucinda Sans Unicode', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    background-image: url("images/jetblackjacket.jpg");
+    color: whitesmoke;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: bold;
 }
 
 h1 {
 	color: goldenrod;
+
+}
+
+#message-el {
+    font-style: italic;
+}
+
+button {
+    background-color: goldenrod;
 }

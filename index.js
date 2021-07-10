@@ -14,7 +14,48 @@ function deal(){
 	let thirdCard = Math.round(Math.random()*9 +2);
 	let newSum = firstCard + secondCard + thirdCard;
 	sumEl.textContent = newSum;
+/* 
+	pseudocode
 
+	let card = Math.round(math.random()*9+2);
+
+	or
+function deal(){
+	let firstCard = Math.round(Math.random()*9 +2);
+	let secondCard = Math.round(Math.random()*9 +2);
+	let thirdCard = Math.round(Math.random()*9 +2);
+	let fourthCard = Math.round(Math.random()*9 +2);
+	let fifthCard = Math.round(Math.random()*9 +2);
+	let sum = firstCard + secondCard;
+	let sum2 = sum + thirdCard;
+	let sum3 = sum2 + fourthCard;
+	let sum4 = sum3 + fifthCard;
+
+
+	if(sum <= 20){
+		message = "Want another card?";
+		messageEl.textContent = message;
+	}
+
+	
+
+
+
+	function dealCard () {
+		let result = sum2;
+	}
+	
+deal another card
+
+	if(){
+	
+	}
+
+
+
+
+	
+*/
 
 
 

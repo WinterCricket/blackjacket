@@ -4,11 +4,11 @@ html, body {
 }
 
 body {
-    /*background-color: darkgreen;*/
+    background-color: #016f32;
     text-align: center;
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-    background-image: url("images/jetblackjacket.jpg");
+    /*background-image: url("images/jetblackjacket.jpg");*/
     color: whitesmoke;
     background-position: center;
     background-repeat: no-repeat;

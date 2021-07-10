@@ -4,19 +4,31 @@ let sumEl = document.getElementById("sum-el");
 
 let saveEl = document.getElementById("save-el");
 let messageEl = document.getElementById("message-el");
+let hasBlackJack = false;
+let isAlive = true;
+let message = "";
 
 function deal(){
 	let firstCard = Math.round(Math.random()*9 +2);
 	let secondCard = Math.round(Math.random()*9 +2);
-	let newSum = firstCard + secondCard;
+	let thirdCard = Math.round(Math.random()*9 +2);
+	let newSum = firstCard + secondCard + thirdCard;
 	sumEl.textContent = newSum;
 
-	if(newSum < 21){
-		messageEl.textContent = "Want another card?";
+
+
+
+	if(newSum <= 20){
+		message = "Want another card?";
+		messageEl.textContent = message;
 	} else if(newSum === 21) {
-		messageEl.textContent = "TWENTY-ONE!";
+		message = "TWENTY-ONE! You may win!";
+		messageEl.textContent = message;
+		// hasBlackJack = true;
 	} else {
-		messageEl.textContent = "You have busted!";
+		message = "You have busted! You're out of the game.";
+		messageEl.textContent = message;
+		// isAlive = false;
 	}
 }
 
@@ -28,6 +40,6 @@ function save() {
 
 	sum = "New deal!";
 	sumEl.textContent = sum;
-	console.log(sumStr);
+	
 }
 

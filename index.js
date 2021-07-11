@@ -14,64 +14,48 @@ let message = "";
 // 	let thirdCard = Math.round(Math.random()*9 +2);
 // 	let newSum = firstCard + secondCard + thirdCard;
  	//sumEl.textContent = newSum;
- 
-	
-
-	
-function deal(){
-
-	let firstCard = Math.round(Math.random()*9 +2);
-	let secondCard = Math.round(Math.random()*9 +2);
-	let thirdCard = Math.round(Math.random()*9 +2);
-	let fourthCard = Math.round(Math.random()*9 +2);
-	let fifthCard = Math.round(Math.random()*9 +2);
-	let sum = firstCard + secondCard;
-	
-	if(sum <= 17){
-		let sumA = sum + thirdCard;
-		
-		sumEl.textContent = sumA;
-		
-		if(sumA <= 17 ) {
-			let sumB = sumA + fourthCard;
-			sumEl.textContent = sumB;
-			if(sumB <= 17){
-				let sumC = sumB + fifthCard;
-				sumEl.textContent = sumC;
-				messageEl.textContent = "You won with five cards!";
-			} else {
-				messageEl.textContent = "You went over! You lose.";
-			}
-		} else if (sumA > 20 || sumA < 22){
-			return message = "Blackjack. Hold and win!";
-			messageEl.textContent = message;
-		}
-		
-	} else if (sum === 21){
-		return message = "Blackjack. Hold and win!";
-		messageEl.textContent = message;
-	} else {
-		return message = "You broke your chances! You went over TWENTY-ONE.";
-		messageEl.textContent = message;
-	}
-
-	
-
-
-	
-
-	
 
 
 
-	
 
+ 	function deal(){
 
+ 		let firstCard = Math.round(Math.random()*9 +2);
+ 		let secondCard = Math.round(Math.random()*9 +2);
+ 		let thirdCard = Math.round(Math.random()*9 +2);
+ 		let fourthCard = Math.round(Math.random()*9 +2);
+ 		let fifthCard = Math.round(Math.random()*9 +2);
+ 		let sum = firstCard + secondCard;
 
-	
+ 		if(sum <= 17){
+ 			let sumA = sum + thirdCard;
 
+ 			sumEl.textContent = sumA;
 
+ 			if (sumA <= 17 ) {
+ 				let sumB = sumA + fourthCard;
+ 				sumEl.textContent = sumB;
+ 				if(sumB <= 17){
+ 					let sumC = sumB + fifthCard;
+ 					sumEl.textContent = sumC;
+ 					return message = "You won with five cards!";
+ 					messageEl.textContent = message;
+ 				} else {
+ 					return message = "You went over! You lose.";
+ 					messageEl.textContent = message;
+ 				}
+ 			} else if (sumA > 20 || sumA < 22){
+ 				return message = "Blackjack. Hold and win!";
+ 				messageEl.textContent = message;
+ 			}
 
+ 			else {
+ 				return message = "You broke your chances! You went over TWENTY-ONE.";
+ 				messageEl.textContent = message;
+ 			}
+
+ 		}
+ 		}	
 
 	// if(newSum <= 20){
 	// 	message = "Want another card?";
@@ -86,7 +70,7 @@ function deal(){
 	// 	// isAlive = false;
 	// }
 
-}
+
 
 
 // function save() {
@@ -94,6 +78,6 @@ function deal(){
 // 	saveEl.textContent += sumStr; 
 
 // 	sumEl.textContent = sum;
-	
+
 // }
 

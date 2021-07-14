@@ -16,23 +16,22 @@ let message = "";
  	//sumEl.textContent = newSum;
 
  	function startGame(){
- 		if(newSum <= 20){
- 			message = "Want another card?";
- 			messageEl.textContent = message;
- 		} else if(newSum === 21) {
- 			message = "TWENTY-ONE! You may win!";
- 			messageEl.textContent = message;
-		// hasBlackJack = true;
-	} else {
-		message = "You have busted! You're out of the game.";
-		messageEl.textContent = message;
-		// isAlive = false;
-	}
-
-}
+ // 		if(newSum <= 20){
+ // 			message = "Want another card?";
+ // 			messageEl.textContent = message;
+ // 		} else if(newSum === 21) {
+ // 			message = "TWENTY-ONE! You may win!";
+ // 			messageEl.textContent = message;
+	// 	// hasBlackJack = true;
+	// } else {
+	// 	message = "You have busted! You're out of the game.";
+	// 	messageEl.textContent = message;
+	// 	// isAlive = false;
+	// }
 
 
-function deal(){
+
+
 
 	let firstCard = Math.round(Math.random()*9 +2);
 	let secondCard = Math.round(Math.random()*9 +2);
@@ -71,18 +70,18 @@ function deal(){
 	}
 }	
 
-if(newSum <= 20){
-	message = "Want another card?";
-	messageEl.textContent = message;
-} else if(newSum === 21) {
-	message = "TWENTY-ONE! You may win!";
-	messageEl.textContent = message;
-		// hasBlackJack = true;
-	} else {
-		message = "You have busted! You're out of the game.";
-		messageEl.textContent = message;
-		// isAlive = false;
-	}
+// if(newSum <= 20){
+// 	message = "Want another card?";
+// 	messageEl.textContent = message;
+// } else if(newSum === 21) {
+// 	message = "TWENTY-ONE! You may win!";
+// 	messageEl.textContent = message;
+// 		// hasBlackJack = true;
+// 	} else {
+// 		message = "You have busted! You're out of the game.";
+// 		messageEl.textContent = message;
+// 		// isAlive = false;
+// 	}
 
 
 

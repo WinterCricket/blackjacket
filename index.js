@@ -10,11 +10,11 @@ let message = "";
 
 let firstCard = Math.round(Math.random()*9 +2);
 let secondCard = Math.round(Math.random()*9 +2);
-let thirdCard = Math.round(Math.random()*9 +2);
+
 // let fourthCard = Math.round(Math.random()*9 +2);
 // let fifthCard = Math.round(Math.random()*9 +2);
-let sum = firstCard + secondCard + thirdCard;
-let cards = firstCard + ", "+secondCard+", "+thirdCard;
+let sum = firstCard + secondCard;
+let cards = firstCard + ", "+secondCard;
 let sumEl = document.getElementById("sum-el");
 //let sumEl = document.querySelector("#sum-el");
 let cardsEl = document.getElementById("cards-el");
@@ -41,10 +41,18 @@ function startGame(){
 	}
 
 	messageEl.textContent = message;
-	sumEl.textContent = "Sum: "+sum;
+	//sumEl.textContent = "Sum: "+sum;
 }
 
+function newCard(){
+	console.log("Drawing a new card from the deck");
 
+	let thirdCard = Math.round(Math.random()*9 +2);
+
+	sum += thirdCard;
+
+	startGame();
+}
 
 
 

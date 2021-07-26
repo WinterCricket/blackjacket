@@ -11,18 +11,20 @@ let message = "";
 let firstCard = Math.round(Math.random()*9 +2);
 let secondCard = Math.round(Math.random()*9 +2);
 
-// let fourthCard = Math.round(Math.random()*9 +2);
-// let fifthCard = Math.round(Math.random()*9 +2);
+
 let sum = firstCard + secondCard;
-let cards = firstCard + ", "+secondCard;
+let cards = [firstCard, secondCard];
 let sumEl = document.getElementById("sum-el");
 //let sumEl = document.querySelector("#sum-el");
 let cardsEl = document.getElementById("cards-el");
 
 function renderGame(){
-
+	cardsEl.textContent = "Cards: " ;
+for (let i = 0; i < cards.length; i++){
+	
+	cardsEl.textContent +=  cards[i] + " ";
+}
 	sumEl.textContent = "Sum: " + sum;
-	cardsEl.textContent = "Cards: " + cards;
 
 	if(sum <= 20){
 		message = "Want another card?";
@@ -47,12 +49,15 @@ function renderGame(){
 function newCard(){
 	
 
-	let thirdCard = Math.round(Math.random()*9 +2);
+	let card = Math.round(Math.random()*9 +2);
 
-	sum += thirdCard;
-
+	sum += card;
+	cards.push(card);
+	
 	renderGame();
 }
+
+
 
 function startGame(){
 	renderGame();

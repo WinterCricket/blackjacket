@@ -8,15 +8,19 @@ let hasBlackJack = false;
 let isAlive = true;
 let message = "";
 
-let firstCard = Math.round(Math.random()*9 +2);
-let secondCard = Math.round(Math.random()*9 +2);
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 
 
 let sum = firstCard + secondCard;
 let cards = [firstCard, secondCard];
 let sumEl = document.getElementById("sum-el");
-//let sumEl = document.querySelector("#sum-el");
+
 let cardsEl = document.getElementById("cards-el");
+
+function getRandomCard(){
+	return Math.round(Math.random()*9 +2);
+}
 
 function renderGame(){
 	cardsEl.textContent = "Cards: " ;
@@ -49,7 +53,7 @@ for (let i = 0; i < cards.length; i++){
 function newCard(){
 	
 
-	let card = Math.round(Math.random()*9 +2);
+	let card = getRandomCard();
 
 	sum += card;
 	cards.push(card);

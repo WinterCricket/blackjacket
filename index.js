@@ -19,8 +19,15 @@ let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 
 function getRandomCard(){
-	//return Math.round(Math.random()*9 +2);
-	return Math.floor(Math.random()*9) +2;
+	
+	let randomNumber = Math.floor(Math.random()*13) +1;
+	if(randomNumber > 10){
+		return 10;
+	} else if (randomNumber === 1){
+		return 11;
+	} else {
+		return randomNumber;
+	}
 }
 
 function renderGame(){

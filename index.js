@@ -9,10 +9,21 @@ let isAlive = false;
 let message = "";
 let sum = 0;
 
+
+
 let cards = [];
 let sumEl = document.getElementById("sum-el");
 
 let cardsEl = document.getElementById("cards-el");
+
+//oop
+let player = {
+	name: "Roddy",
+	chips: 140
+}
+
+let playerEl = document.getElementById("player-el");
+playerEl.textContent = playerName +" $"+player.chips;
 
 function getRandomCard(){
 	

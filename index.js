@@ -36,18 +36,17 @@ function renderGame(){
 
 	if(sum <= 20){
 		message = "Want another card?";
-
+		isAlive = true;
 	}
 
 	else if(sum === 21) {
 		message = "BlackJacket!";
-
-
 		hasBlackJack = true;
 	} else {
 		message = "You went over. You're out of the game.";
 
 		isAlive = false;
+
 	}
 
 	messageEl.textContent = message;
@@ -55,15 +54,17 @@ function renderGame(){
 }
 
 function newCard(){
-	
+	if(isAlive && hasBlackJack === false){
 
 	let card = getRandomCard();
 
 	sum += card;
 	cards.push(card);
-	
+} 
+
 	renderGame();
 }
+
 
 
 

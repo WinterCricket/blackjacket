@@ -1,6 +1,9 @@
 
 
-
+let player = {
+	name: "Roddy",
+	chips: 140
+}
 
 let saveEl = document.getElementById("save-el");
 let messageEl = document.getElementById("message-el");
@@ -17,13 +20,10 @@ let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 
 //oop
-let player = {
-	name: "Roddy",
-	chips: 140
-}
+
 
 let playerEl = document.getElementById("player-el");
-playerEl.textContent = playerName +" $"+player.chips;
+playerEl.textContent = player.name +": $"+player.chips ;
 
 function getRandomCard(){
 	
